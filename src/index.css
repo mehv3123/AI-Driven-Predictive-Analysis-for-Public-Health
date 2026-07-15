@@ -1,0 +1,107 @@
+/* src/index.css */
+@import "tailwindcss";
+
+:root {
+  font-family: 'Space Grotesk', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #f9fafb;
+
+  /* HIDE SCROLLBAR CSS (Cross-browser solution) */
+
+  /* 1. For IE and Edge (older versions) */
+  -ms-overflow-style: none;
+
+  /* 2. For Firefox */
+  scrollbar-width: none;
+}
+
+/* 3. For Webkit Browsers (Chrome, Safari, newer Edge) */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+
+#root {
+  height: 100%;
+}
+
+/* Add this for the ripple effect */
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+.ripple-effect {
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  transform: scale(0);
+  animation: ripple 0.6s ease-out;
+  pointer-events: none;
+}
+
+/* Google Translate Overrides */
+.goog-te-banner-frame.skiptranslate,
+.goog-te-banner-frame,
+#goog-gt-tt,
+.VIpgJd-ZVi9od-aZ2wEe-wOHMyf,
+.VIpgJd-ZVi9od-ORHb-OEVmcd,
+.skiptranslate>iframe.goog-te-banner-frame {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+body {
+  top: 0px !important;
+  position: static !important;
+}
+
+html {
+  height: 100%;
+  top: 0px !important;
+}
+
+/* Restyle the Google select widget to match layout without cutoff */
+.goog-logo-link {
+  display: none !important;
+}
+
+.goog-te-gadget {
+  color: transparent !important;
+  font-size: 0px !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.goog-te-gadget .goog-te-combo {
+  color: #374151 !important;
+  background-color: transparent !important;
+  border: none !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  padding: 4px 8px !important;
+  margin: 0 !important;
+  outline: none !important;
+  cursor: pointer !important;
+  width: auto !important;
+  min-width: 120px;
+  border-radius: 6px !important;
+}
+
+.goog-te-gadget>span {
+  display: none !important;
+}
